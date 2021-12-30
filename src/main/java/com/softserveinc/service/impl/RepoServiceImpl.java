@@ -24,11 +24,11 @@ public class RepoServiceImpl implements RepoService {
   }
 
   @Override
-  public List<BranchDto> getAllBranches(String repoName) {
+  public List<BranchDto> getAllBranches(String repoName, String user) {
     RestTemplate restTemplate = new RestTemplate();
     ResponseEntity<List<BranchDto>> rateResponse =
         restTemplate.exchange(
-            "https://api.github.com/repos/YaroslavVoitiuk/" + repoName + "/branches",
+            "https://api.github.com/repos/"+user+"/" + repoName + "/branches",
             HttpMethod.GET, null, new ParameterizedTypeReference<List<BranchDto>>() {
             });
     return rateResponse.getBody();

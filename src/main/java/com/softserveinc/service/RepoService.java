@@ -9,6 +9,6 @@ public interface RepoService {
 
   List<RepoDto> getAllRepos(String user);
 
-  List<BranchDto> getAllBranches(String repoName);
+  List<BranchDto> getAllBranches(String repoName, String user);
 
 }

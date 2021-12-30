@@ -32,8 +32,8 @@ public class RepoController {
 
   @RequestMapping(value = "/show_branches", method = RequestMethod.GET)
   public ResponseEntity<List<BranchDto>> findAllBranches(
-      @RequestParam("repoName") String repoName) {
-    List<BranchDto> rates = repoService.getAllBranches(repoName);
+      @RequestParam("repoName") String repoName, @RequestParam("user") String user) {
+    List<BranchDto> rates = repoService.getAllBranches(repoName, user);
     return new ResponseEntity<>(rates, HttpStatus.OK);
 
   }
