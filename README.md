@@ -1,0 +1,1 @@
+to use this program you need to make 2 queries with parameters, in the first case to get all the repositories you need to pass the username in the parameter, then all its repositories will be shown, to search for branches you need to pass the name of the branch and username
